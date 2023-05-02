@@ -1,10 +1,11 @@
 package co.edu.uco.compuconnect.entities;
 
 import java.time.LocalTime;
+
 import java.util.Date;
 import java.util.UUID;
 
-import co.edu.uco.compuconnect.business.domain.DiaSemanalDomain;
+
 import co.edu.uco.compuconnect.crosscutting.utils.UtilDateTime;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
