@@ -1,0 +1,9 @@
+
+*.class
+*.class
+target/classes/co/edu/uco/compuconnect/entities/AgendaEntity.class
+*.xml
+*.MF
+*.class
+*.properties
+*.class
