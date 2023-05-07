@@ -7,3 +7,4 @@ target/classes/co/edu/uco/compuconnect/entities/AgendaEntity.class
 *.class
 *.properties
 *.class
+*.class
