@@ -2,6 +2,7 @@ package co.edu.uco.compuconnect.entities;
 
 
 
+import java.time.LocalTime;
 import java.util.Date;
 
 import java.util.UUID;
@@ -11,9 +12,13 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class ReservaEntity extends ContenidoEntity{
+public final class ReservaEntity{
 	
 	private static final ReservaEntity DEFAULT_OBJECT = new ReservaEntity();
+	private UUID identificador;
+	private UsuarioEntity autor;
+	private String descripcion;
+	private LocalTime horaCreacion;
 	private TipoReservaEntity tipoReserva;
 	private Date fechaInicio;
 	private Date fechaFin;
@@ -21,7 +26,7 @@ public final class ReservaEntity extends ContenidoEntity{
 	private CentroInformaticaEntity centroInformatica;
 	
 
-	public ReservaEntity(UUID identificador, UsuarioEntity autor, TipoReservaEntity tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaEntity frecuencia, CentroInformaticaEntity centroInformatica,String descripcion, Date horaCreacion) {
+	public ReservaEntity(UUID identificador, UsuarioEntity autor, TipoReservaEntity tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaEntity frecuencia, CentroInformaticaEntity centroInformatica,String descripcion, LocalTime horaCreacion) {
 		setIdentificador(identificador);
 		setAutor(autor);
 		setTipoReserva(tipoReserva);
@@ -43,7 +48,7 @@ public final class ReservaEntity extends ContenidoEntity{
 		setFrecuencia(FrecuenciaEntity.getDefaultObject());
 		setCentroInformatica(CentroInformaticaEntity.getDefaultObject());
 		setDescripcion(UtilText.getDefaultValue());
-		setHoraCreacion(UtilDateTime.getDefaultValueDate());
+		setHoraCreacion(UtilDateTime.getDefaultValueLocaltime());
 	}
 	
 	
@@ -87,13 +92,13 @@ public final class ReservaEntity extends ContenidoEntity{
 	}
 
 
-	public Date getHoraCreacion() {
+	public LocalTime getHoraCreacion() {
 		return horaCreacion;
 	}
 
 
-	private final void   setHoraCreacion(Date horaCreacion) {
-		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
+	private final void   setHoraCreacion(LocalTime horaCreacion) {
+		this.horaCreacion = UtilDateTime.getDefaultLocalTime(horaCreacion);
 		
 	}
 

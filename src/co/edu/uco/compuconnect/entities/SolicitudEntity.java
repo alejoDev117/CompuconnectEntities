@@ -2,6 +2,7 @@
 package co.edu.uco.compuconnect.entities;
 
 
+import java.time.LocalTime;
 import java.util.Date;
 import java.util.UUID;
 
@@ -10,13 +11,17 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class SolicitudEntity extends ContenidoEntity {
+public final class SolicitudEntity {
 	
 	private static final SolicitudEntity DEFAULT_OBJECT = new SolicitudEntity();
+	private UUID identificador;
+	private UsuarioEntity autor;
+	private String descripcion;
+	private LocalTime horaCreacion;
 	private TipoSolicitudEntity tipoSolicitud;
 	private EstadoSolicitudEntity estadoSolicitud;
 	
-	public SolicitudEntity(UUID identificador, UsuarioEntity autor, TipoSolicitudEntity tipoSolicitud, String descripcion, Date horaCreacion, EstadoSolicitudEntity estadoSolicitud) {
+	public SolicitudEntity(UUID identificador, UsuarioEntity autor, TipoSolicitudEntity tipoSolicitud, String descripcion, LocalTime horaCreacion, EstadoSolicitudEntity estadoSolicitud) {
 		setIdentificador(identificador);
 		setAutor(autor);
 		setTipoSolicitud(tipoSolicitud);
@@ -33,7 +38,7 @@ public final class SolicitudEntity extends ContenidoEntity {
 		setAutor(UsuarioEntity.getDeafaulObject());
 		setTipoSolicitud(TipoSolicitudEntity.getDefaultObject());
 		setDescripcion(UtilText.getDefaultValue());
-		setHoraCreacion(UtilDateTime.getDefaultValueDate());
+		setHoraCreacion(UtilDateTime.getDefaultValueLocaltime());
 		setEstadoSolicitud(EstadoSolicitudEntity.getDefaultObject());
 		
 	}
@@ -79,13 +84,14 @@ public final class SolicitudEntity extends ContenidoEntity {
 	}
 
 
-	public Date getHoraCreacion() {
+	public LocalTime getHoraCreacion() {
 		return horaCreacion;
 	}
 
 
-	public final void setHoraCreacion(Date horaCreacion) {
-		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
+
+	private final void setHoraCreacion(LocalTime horaCreacion) {
+		this.horaCreacion = UtilDateTime.getDefaultLocalTime(horaCreacion);
 		
 	}
 
