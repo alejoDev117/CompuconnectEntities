@@ -1,8 +1,13 @@
 Manifest-Version: 1.0
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Built-By: USUARIO
 Build-Jdk: 19.0.2
+=======
+Built-By: JuanC
+Build-Jdk: 17.0.6
+>>>>>>> Stashed changes
 =======
 Built-By: JuanC
 Build-Jdk: 17.0.6

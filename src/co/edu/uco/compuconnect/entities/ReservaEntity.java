@@ -11,7 +11,7 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class ReservaEntity extends ContenidoEntity{
+public final class ReservaEntity{
 	
 	private static final ReservaEntity DEFAULT_OBJECT = new ReservaEntity();
 	private TipoReservaEntity tipoReserva;
@@ -19,6 +19,11 @@ public final class ReservaEntity extends ContenidoEntity{
 	private Date fechaFin;
 	private FrecuenciaEntity frecuencia;
 	private CentroInformaticaEntity centroInformatica;
+	private UUID identificador;
+	private UsuarioEntity autor;
+	private String descripcion;
+	private Date horaCreacion;
+	
 	
 
 	public ReservaEntity(UUID identificador, UsuarioEntity autor, TipoReservaEntity tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaEntity frecuencia, CentroInformaticaEntity centroInformatica,String descripcion, Date horaCreacion) {
