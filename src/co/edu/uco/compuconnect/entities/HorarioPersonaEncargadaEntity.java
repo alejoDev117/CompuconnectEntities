@@ -62,6 +62,7 @@ public class HorarioPersonaEncargadaEntity {
 	}
 	
 	private final void setPersonaEncargada(PersonaEncargadaEntity personaEncargada) {
+
 		this.personaEncargada = UtilObject.getDefault(personaEncargada, PersonaEncargadaEntity.getDeafaultObject());
 	}
 	

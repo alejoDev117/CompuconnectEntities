@@ -20,7 +20,7 @@ public class AgendaReservaEntity {
 		setReserva(reserva);
 	}
 	
-	public AgendaReservaEntity() {
+	private AgendaReservaEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAgenda(AgendaEntity.getDefaultObject());
@@ -35,7 +35,7 @@ public class AgendaReservaEntity {
 		return identificador;
 	}
 
-	public final void setIdentificador(final UUID identificador) {
+	private final void setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
 	}
 
@@ -43,7 +43,7 @@ public class AgendaReservaEntity {
 		return agenda;
 	}
 
-	public final void setAgenda(final AgendaEntity agenda) {
+	private final void setAgenda(final AgendaEntity agenda) {
 		this.agenda = UtilObject.getDefault(agenda, AgendaEntity.getDefaultObject());
 	}
 
@@ -51,7 +51,7 @@ public class AgendaReservaEntity {
 		return reserva;
 	}
 
-	public final void setReserva(final ReservaEntity reserva) {
+	private final void setReserva(final ReservaEntity reserva) {
 		this.reserva = UtilObject.getDefault(reserva, ReservaEntity.getDefaultObject());
 	}
 	

@@ -32,7 +32,7 @@ public final class SolicitudEntity {
 	}
 	
 	
-	public SolicitudEntity() {
+	private SolicitudEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAutor(UsuarioEntity.getDeafaulObject());
@@ -89,7 +89,7 @@ public final class SolicitudEntity {
 	}
 
 
-	public final void setHoraCreacion(Date horaCreacion) {
+	private final void setHoraCreacion(Date horaCreacion) {
 		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
 		
 	}
@@ -98,7 +98,7 @@ public final class SolicitudEntity {
 		return tipoSolicitud;
 	}
 
-	public final void setTipoSolicitud(TipoSolicitudEntity tipoSolicitud) {
+	private final void setTipoSolicitud(TipoSolicitudEntity tipoSolicitud) {
 		this.tipoSolicitud = UtilObject.getDefault(tipoSolicitud, TipoSolicitudEntity.getDefaultObject());
 
 	}
@@ -107,7 +107,7 @@ public final class SolicitudEntity {
 		return estadoSolicitud;
 	}
 
-	public final void setEstadoSolicitud(EstadoSolicitudEntity estadoSolicitud) {
+	private final void setEstadoSolicitud(EstadoSolicitudEntity estadoSolicitud) {
 		this.estadoSolicitud = UtilObject.getDefault(estadoSolicitud, EstadoSolicitudEntity.getDefaultObject());
 	
 	}

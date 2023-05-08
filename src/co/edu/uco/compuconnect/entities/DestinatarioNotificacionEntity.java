@@ -24,6 +24,7 @@ public class DestinatarioNotificacionEntity {
 	private DestinatarioNotificacionEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
+
 		setDestinatario(DestinatarioEntity.getDefaultObject());
 		setNotificacion(NotificacionEntity.getDefaultObject());
 		setEstado(EstadoNotificacionEntity.getDefaultObject());
@@ -48,6 +49,7 @@ public class DestinatarioNotificacionEntity {
 	
 	private final void setDestinatario(DestinatarioEntity destinatario) {
 		this.destinatario = UtilObject.getDefault(destinatario, DestinatarioEntity.getDefaultObject());
+
 	}
 	
 	public final NotificacionEntity getNotificacion() {
