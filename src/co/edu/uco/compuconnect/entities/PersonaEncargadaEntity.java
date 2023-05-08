@@ -1,8 +1,85 @@
 package co.edu.uco.compuconnect.entities;
 
-public abstract class PersonaEncargadaEntity extends DestinatarioEntity {
+import java.util.UUID;
+
+import co.edu.uco.compuconnect.crosscutting.utils.UtilMail;
+import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
+import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
+
+public final class PersonaEncargadaEntity {
 	
-	protected String numeroCelular;
+	private String numeroCelular;
+	private UUID identificador;
+	private String nombre;
+	private String correoInstitucional;
+	private static final PersonaEncargadaEntity DEFAULT_OBJECT = new PersonaEncargadaEntity();
+	
+	
+	public PersonaEncargadaEntity(String numeroCelular, UUID identificador, String nombre, String correoInstitucional) {
+		super();
+		setNumeroCelular(numeroCelular);
+		setIdentificador(identificador);
+		setNombre(nombre);
+		setCorreoInstitucional(correoInstitucional);
+	}
+	
+	public PersonaEncargadaEntity() {
+		super();
+		setNumeroCelular(UtilText.getDefaultValue());
+		setIdentificador(UtilUUID.getDefaultUuid());
+		setNombre(UtilText.getDefaultValue());
+		setCorreoInstitucional(UtilMail.getDefaultValueMail());
+	}
+	
+	public static final PersonaEncargadaEntity getDeafaultObject() {
+		return DEFAULT_OBJECT;
+	}
+
+	public final String getNumeroCelular() {
+		return numeroCelular;
+	}
+
+	private final void setNumeroCelular(String numeroCelular) {
+		this.numeroCelular = UtilText.applyTrim(numeroCelular);
+	}
+
+	public final UUID getIdentificador() {
+		return identificador;
+	}
+
+	private final void setIdentificador(UUID identificador) {
+		this.identificador = UtilUUID.getDefault(identificador);
+	}
+
+	public final String getNombre() {
+		return nombre;
+	}
+
+	private final void setNombre(String nombre) {
+		this.nombre = UtilText.applyTrim(nombre);
+	}
+
+	public final String getCorreoInstitucional() {
+		return correoInstitucional;
+	}
+
+	public final void setCorreoInstitucional(String correoInstitucional) {
+		this.correoInstitucional = UtilText.applyTrim(correoInstitucional);
+	}
+	
+	
+	
+	
+	
+	
+	
+		
+}
+	
+	
+	
+	
+	
+
 
 	
-}

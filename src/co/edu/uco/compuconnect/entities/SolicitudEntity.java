@@ -10,11 +10,16 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class SolicitudEntity extends ContenidoEntity {
+public final class SolicitudEntity {
 	
 	private static final SolicitudEntity DEFAULT_OBJECT = new SolicitudEntity();
 	private TipoSolicitudEntity tipoSolicitud;
 	private EstadoSolicitudEntity estadoSolicitud;
+	private UUID identificador;
+	private UsuarioEntity autor;
+	private String descripcion;
+	private Date horaCreacion;
+	
 	
 	public SolicitudEntity(UUID identificador, UsuarioEntity autor, TipoSolicitudEntity tipoSolicitud, String descripcion, Date horaCreacion, EstadoSolicitudEntity estadoSolicitud) {
 		setIdentificador(identificador);
