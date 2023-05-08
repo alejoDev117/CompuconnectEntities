@@ -16,9 +16,10 @@ public final class MonitorEntity {
 	private TipoIdentificacionEntity tipoIdentificacion;
 	private String correoInstitucional;
 	private String numeroCelular;
+	private TipoUsuarioEntity tipoUsuario;
 	private static final MonitorEntity DEFAULT_OBJECT = new MonitorEntity();
 	
-	public MonitorEntity(UUID identificador, String nombre, TipoIdentificacionEntity tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular) {
+	public MonitorEntity(UUID identificador, String nombre, TipoIdentificacionEntity tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular, TipoUsuarioEntity tipoUsuario) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -26,7 +27,7 @@ public final class MonitorEntity {
 		setIdentificacion(numeroIdentificacion);
 		setCorreoInstitucional(correoInstitucional);
 		setNumeroCelular(numeroCelular);
-		
+		setTipoUsuario(tipoUsuario);
 	}
 	
 	
@@ -38,7 +39,7 @@ public final class MonitorEntity {
 		setIdentificacion(UtilText.getDefaultValue());
 		setCorreoInstitucional(UtilMail.getDefaultValueMail());
 		setNumeroCelular(UtilText.getDefaultValue());
-		
+		setTipoUsuario(TipoUsuarioEntity.getDefaultObject());
 	}
 	
 
@@ -114,6 +115,15 @@ public final class MonitorEntity {
 	private final void   setNumeroCelular(String numeroCelular) {
 		this.numeroCelular = UtilText.applyTrim(numeroCelular);
 		
+	}
+	
+	public final TipoUsuarioEntity getTipoUsuario() {
+		return tipoUsuario;
+	}
+
+
+	public final void setTipoUsuario(TipoUsuarioEntity tipoUsuario) {
+		this.tipoUsuario = UtilObject.getDefault(tipoUsuario, TipoUsuarioEntity.getDefaultObject());
 	}
 
 

@@ -16,10 +16,11 @@ public final class CoordinadorEntity{
 	protected String identificacion;
 	protected String correoInstitucional;
 	protected String numeroCelular;
+	protected TipoUsuarioEntity tipoUsuario;
 	
 
 	
-	public CoordinadorEntity(UUID identificador, String nombre, TipoIdentificacionEntity tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular) {
+	public CoordinadorEntity(UUID identificador, String nombre, TipoIdentificacionEntity tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular, TipoUsuarioEntity tipoUsuario) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -27,10 +28,12 @@ public final class CoordinadorEntity{
 		setIdentificacion(numeroIdentificacion);
 		setCorreoInstitucional(correoInstitucional);
 		setNumeroCelular(numeroCelular);
+		setTipoUsuario(tipoUsuario);
 		
 	}
 	
-	
+
+
 	private CoordinadorEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
@@ -39,6 +42,7 @@ public final class CoordinadorEntity{
 		setIdentificacion(UtilText.getDefaultValue());
 		setCorreoInstitucional(UtilMail.getDefaultValueMail());
 		setNumeroCelular(UtilText.getDefaultValue());
+		setTipoUsuario(TipoUsuarioEntity.getDefaultObject());
 		
 	}
 	
@@ -113,6 +117,15 @@ public final class CoordinadorEntity{
 	private final void  setNumeroCelular(String numeroCelular) {
 		this.numeroCelular = UtilText.applyTrim(numeroCelular);
 		
+	}
+	
+	public final TipoUsuarioEntity getTipoUsuario() {
+		return tipoUsuario;
+	}
+
+
+	public final void setTipoUsuario(TipoUsuarioEntity tipoUsuario) {
+		this.tipoUsuario = UtilObject.getDefault(tipoUsuario, TipoUsuarioEntity.getDefaultObject());
 	}
 
 
