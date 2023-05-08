@@ -7,14 +7,14 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class UsuarioEntity {
+public class UsuarioEntity {
 	
-	private TipoUsuarioEntity tipoUsuario;
-	private UUID identificador;
-	private String correoInstitucional;
-	private String identificacion;
-	private TipoIdentificacionEntity tipoIdentificacion;
-	private String nombre;
+	protected TipoUsuarioEntity tipoUsuario;
+	protected UUID identificador;
+	protected String correoInstitucional;
+	protected String identificacion;
+	protected TipoIdentificacionEntity tipoIdentificacion;
+	protected String nombre;
 	private static final UsuarioEntity DEFAULT_OBJECT  = new UsuarioEntity();
 	
 
@@ -28,7 +28,7 @@ public final class UsuarioEntity {
 		
 	}
 	
-	private  UsuarioEntity() {
+	protected  UsuarioEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setTipoUsuario(TipoUsuarioEntity.getDefaultObject());
@@ -47,7 +47,7 @@ public final class UsuarioEntity {
 		return DEFAULT_OBJECT;
 	}
 
-	public final TipoUsuarioEntity getTipoUsuario() {
+	public TipoUsuarioEntity getTipoUsuario() {
 		return tipoUsuario;
 	}
 

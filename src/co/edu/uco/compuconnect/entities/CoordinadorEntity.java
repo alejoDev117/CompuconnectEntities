@@ -7,19 +7,14 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class CoordinadorEntity{
+public final class CoordinadorEntity extends UsuarioEntity{
 
-	private static final CoordinadorEntity DEFAULT_OBJECT = new CoordinadorEntity();
-	protected UUID identificador;
-	protected String nombre;
-	protected TipoIdentificacionEntity tipoIdentificacion;
-	protected String identificacion;
-	protected String correoInstitucional;
+	private static final CoordinadorEntity DEFAULT_OBJECT = new CoordinadorEntity();	
 	protected String numeroCelular;
 	
 
-	
-	public CoordinadorEntity(UUID identificador, String nombre, TipoIdentificacionEntity tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular) {
+
+	public CoordinadorEntity(UUID identificador, String nombre, TipoIdentificacionEntity tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular, TipoUsuarioEntity tipoUsuario) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -27,6 +22,7 @@ public final class CoordinadorEntity{
 		setIdentificacion(numeroIdentificacion);
 		setCorreoInstitucional(correoInstitucional);
 		setNumeroCelular(numeroCelular);
+		setTipoUsuario(tipoUsuario);
 		
 	}
 	
@@ -39,6 +35,7 @@ public final class CoordinadorEntity{
 		setIdentificacion(UtilText.getDefaultValue());
 		setCorreoInstitucional(UtilMail.getDefaultValueMail());
 		setNumeroCelular(UtilText.getDefaultValue());
+		setTipoUsuario(TipoUsuarioEntity.getDefaultObject());
 		
 	}
 	
@@ -113,6 +110,16 @@ public final class CoordinadorEntity{
 	private final void  setNumeroCelular(String numeroCelular) {
 		this.numeroCelular = UtilText.applyTrim(numeroCelular);
 		
+	}
+	
+	
+	public final TipoUsuarioEntity getTipoUsuario() {
+		return tipoUsuario;
+	}
+
+
+	public final void setTipoUsuario(TipoUsuarioEntity tipoUsuario) {
+		this.tipoUsuario = UtilObject.getDefault(tipoUsuario, TipoUsuarioEntity.getDefaultObject());
 	}
 
 

@@ -18,7 +18,7 @@ public final class ReservaEntity{
 	private UUID identificador;
 	private UsuarioEntity autor;
 	private String descripcion;
-	private LocalTime horaCreacion;
+	private Date horaCreacion;
 	private TipoReservaEntity tipoReserva;
 	private Date fechaInicio;
 	private Date fechaFin;
@@ -26,7 +26,7 @@ public final class ReservaEntity{
 	private CentroInformaticaEntity centroInformatica;
 	
 
-	public ReservaEntity(UUID identificador, UsuarioEntity autor, TipoReservaEntity tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaEntity frecuencia, CentroInformaticaEntity centroInformatica,String descripcion, LocalTime horaCreacion) {
+	public ReservaEntity(UUID identificador, UsuarioEntity autor, TipoReservaEntity tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaEntity frecuencia, CentroInformaticaEntity centroInformatica,String descripcion, Date horaCreacion) {
 		setIdentificador(identificador);
 		setAutor(autor);
 		setTipoReserva(tipoReserva);
@@ -48,7 +48,7 @@ public final class ReservaEntity{
 		setFrecuencia(FrecuenciaEntity.getDefaultObject());
 		setCentroInformatica(CentroInformaticaEntity.getDefaultObject());
 		setDescripcion(UtilText.getDefaultValue());
-		setHoraCreacion(UtilDateTime.getDefaultValueLocaltime());
+		setHoraCreacion(UtilDateTime.getDefaultValueDate());
 	}
 	
 	
@@ -92,13 +92,13 @@ public final class ReservaEntity{
 	}
 
 
-	public LocalTime getHoraCreacion() {
+	public Date getHoraCreacion() {
 		return horaCreacion;
 	}
 
 
-	private final void   setHoraCreacion(LocalTime horaCreacion) {
-		this.horaCreacion = UtilDateTime.getDefaultLocalTime(horaCreacion);
+	private final void   setHoraCreacion(Date horaCreacion) {
+		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
 		
 	}
 

@@ -13,25 +13,19 @@ public final class ContenidoEntity {
 	
 	private static final ContenidoEntity DEAFAULT_OBJECT = new ContenidoEntity();
 	private UUID identificador;
-	private UsuarioEntity autor;
 	private String descripcion;
-	private Date horaCreacion;
 	
 	
-	public ContenidoEntity(UUID identificador, UsuarioEntity autor, String descripcion, Date horaCreacion) {
+	public ContenidoEntity(UUID identificador, String descripcion) {
 		super();
 		setIdentificador(identificador);
-		setAutor(autor);
 		setDescripcion(descripcion);
-		setHoraCreacion(horaCreacion);
 	}
 	
 	public ContenidoEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setAutor(UsuarioEntity.getDeafaulObject());
 		setDescripcion(UtilText.getDefaultValue());
-		setHoraCreacion(UtilDateTime.getDefaultValueDate());
 	}
 	
 	public static final ContenidoEntity getDeafaultObject() {
@@ -46,13 +40,7 @@ public final class ContenidoEntity {
 		this.identificador = UtilUUID.getDefault(identificador);
 	}
 
-	public final UsuarioEntity getAutor() {
-		return autor;
-	}
-
-	private final void setAutor(UsuarioEntity autor) {
-		this.autor = UtilObject.getDefault(autor, UsuarioEntity.getDeafaulObject());
-	}
+	
 
 	public final String getDescripcion() {
 		return descripcion;
@@ -62,17 +50,9 @@ public final class ContenidoEntity {
 		this.descripcion = UtilText.applyTrim(descripcion);
 	}
 
-	public final Date getHoraCreacion() {
-		return horaCreacion;
-	}
-
-	private final void setHoraCreacion(Date horaCreacion) {
-		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
-	}
-
 	
 	
-	
+}
 	
 	
 	

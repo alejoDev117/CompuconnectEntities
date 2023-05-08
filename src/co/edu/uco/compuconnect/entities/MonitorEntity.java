@@ -7,18 +7,13 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class MonitorEntity {
+public final class MonitorEntity extends UsuarioEntity {
 	
 	
-	private UUID identificador;
-	private String nombre;
-	private String identificacion;
-	private TipoIdentificacionEntity tipoIdentificacion;
-	private String correoInstitucional;
-	private String numeroCelular;
 	private static final MonitorEntity DEFAULT_OBJECT = new MonitorEntity();
-	
-	public MonitorEntity(UUID identificador, String nombre, TipoIdentificacionEntity tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular) {
+
+	private String numeroCelular;
+	public MonitorEntity(UUID identificador, String nombre, TipoIdentificacionEntity tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular, TipoUsuarioEntity tipoUsuario) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -26,8 +21,9 @@ public final class MonitorEntity {
 		setIdentificacion(numeroIdentificacion);
 		setCorreoInstitucional(correoInstitucional);
 		setNumeroCelular(numeroCelular);
-		
+		setTipoUsuario(tipoUsuario);
 	}
+	
 	
 	
 	public MonitorEntity() {
@@ -38,6 +34,7 @@ public final class MonitorEntity {
 		setIdentificacion(UtilText.getDefaultValue());
 		setCorreoInstitucional(UtilMail.getDefaultValueMail());
 		setNumeroCelular(UtilText.getDefaultValue());
+		setTipoUsuario(TipoUsuarioEntity.getDefaultObject());
 		
 	}
 	
@@ -117,4 +114,13 @@ public final class MonitorEntity {
 	}
 
 
+	public final TipoUsuarioEntity getTipoUsuario() {
+		return tipoUsuario;
+	}
+
+
+	public final void setTipoUsuario(TipoUsuarioEntity tipoUsuario) {
+		this.tipoUsuario = UtilObject.getDefault(tipoUsuario, TipoUsuarioEntity.getDefaultObject());
+	}
+	
 }
