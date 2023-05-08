@@ -28,7 +28,6 @@ public class NotificacionEntity {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setContenido(ContenidoEntity.getDeafaultObject());
-		setContenido(ReservaEntity.getDefaultObject());
 		setFecha(UtilDateTime.getDefaultValueDate());
 		setTipo(TipoNotificacionEntity.getDefaultObject());
 	}
