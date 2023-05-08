@@ -31,7 +31,7 @@ public class HorarioPersonaEncargadaEntity {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setTiempoFuncionamiento(TiempoFuncionamientoCentroInformaticaEntity.getDefaultObject());
-		setPersonaEncargada(MonitorEntity.getDeafaultObject());
+		setPersonaEncargada(PersonaEncargadaEntity.getDeafaultObject());
 		setHoraInicio(UtilDateTime.getDefaultValueLocaltime());
 		setHoraFin(UtilDateTime.getDefaultValueLocaltime());
 	}
@@ -62,7 +62,8 @@ public class HorarioPersonaEncargadaEntity {
 	}
 	
 	private final void setPersonaEncargada(PersonaEncargadaEntity personaEncargada) {
-		this.personaEncargada = UtilObject.getDefault(personaEncargada, MonitorEntity.getDeafaultObject());
+
+		this.personaEncargada = UtilObject.getDefault(personaEncargada, PersonaEncargadaEntity.getDeafaultObject());
 	}
 	
 	public final LocalTime getHoraInicio() {

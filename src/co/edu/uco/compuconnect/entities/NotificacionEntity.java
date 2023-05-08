@@ -27,7 +27,8 @@ public class NotificacionEntity {
 	private NotificacionEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setContenido(ContenidoEntity.getDefaultObject());
+		setContenido(ContenidoEntity.getDeafaultObject());
+		setContenido(ReservaEntity.getDefaultObject());
 		setFecha(UtilDateTime.getDefaultValueDate());
 		setTipo(TipoNotificacionEntity.getDefaultObject());
 	}
@@ -50,7 +51,7 @@ public class NotificacionEntity {
 	}
 	
 	private final void setContenido(ContenidoEntity contenido) {
-		this.contenido = UtilObject.getDefault(contenido, ContenidoEntity.getDefaultObject());
+		this.contenido = UtilObject.getDefault(contenido, ContenidoEntity.getDeafaultObject());
 	}
 
 	public final Date getFecha() {

@@ -7,10 +7,17 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class CoordinadorEntity extends PersonaEncargadaEntity {
+public final class CoordinadorEntity{
 
 	private static final CoordinadorEntity DEFAULT_OBJECT = new CoordinadorEntity();
+	protected UUID identificador;
+	protected String nombre;
+	protected TipoIdentificacionEntity tipoIdentificacion;
+	protected String identificacion;
+	protected String correoInstitucional;
+	protected String numeroCelular;
 	
+
 	
 	public CoordinadorEntity(UUID identificador, String nombre, TipoIdentificacionEntity tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular) {
 		super();
@@ -49,7 +56,7 @@ public final class CoordinadorEntity extends PersonaEncargadaEntity {
 	
 	private final void setIdentificador(UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
-		
+
 	}
 
 	
@@ -103,7 +110,7 @@ public final class CoordinadorEntity extends PersonaEncargadaEntity {
 
 
 
-	private final void   setNumeroCelular(String numeroCelular) {
+	private final void  setNumeroCelular(String numeroCelular) {
 		this.numeroCelular = UtilText.applyTrim(numeroCelular);
 		
 	}

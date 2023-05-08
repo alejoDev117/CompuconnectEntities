@@ -1,7 +1,6 @@
 package co.edu.uco.compuconnect.entities;
 
 
-import java.time.LocalTime;
 import java.util.Date;
 import java.util.UUID;
 
@@ -10,68 +9,71 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public  class ContenidoEntity {
-
+public final class ContenidoEntity {
 	
-	private static final ContenidoEntity DEFAULT_OBJECT = new ContenidoEntity();
+	private static final ContenidoEntity DEAFAULT_OBJECT = new ContenidoEntity();
 	private UUID identificador;
 	private UsuarioEntity autor;
 	private String descripcion;
-	private LocalTime horaCreacion;
+	private Date horaCreacion;
 	
 	
-	public ContenidoEntity(UUID identificador, UsuarioEntity usuario, String descripcion, LocalTime horaCreacion) {
+	public ContenidoEntity(UUID identificador, UsuarioEntity autor, String descripcion, Date horaCreacion) {
 		super();
 		setIdentificador(identificador);
-		setAutor(usuario);
+		setAutor(autor);
 		setDescripcion(descripcion);
 		setHoraCreacion(horaCreacion);
 	}
 	
-	private ContenidoEntity() {
+	public ContenidoEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAutor(UsuarioEntity.getDeafaulObject());
 		setDescripcion(UtilText.getDefaultValue());
-		setHoraCreacion(UtilDateTime.getDefaultValueLocaltime());
+		setHoraCreacion(UtilDateTime.getDefaultValueDate());
 	}
 	
-	public static final ContenidoEntity getDefaultObject() {
-		return DEFAULT_OBJECT;
+	public static final ContenidoEntity getDeafaultObject() {
+		return DEAFAULT_OBJECT;
 	}
-	
-	
+
 	public final UUID getIdentificador() {
 		return identificador;
 	}
-	
-	public final void setIdentificador(UUID identificador) {
+
+	private final void setIdentificador(UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
 	}
-	
+
 	public final UsuarioEntity getAutor() {
 		return autor;
 	}
-	
-	public final void setAutor(UsuarioEntity autor) {
+
+	private final void setAutor(UsuarioEntity autor) {
 		this.autor = UtilObject.getDefault(autor, UsuarioEntity.getDeafaulObject());
 	}
-	
+
 	public final String getDescripcion() {
 		return descripcion;
 	}
-	
-	public final void setDescripcion(String descripcion) {
+
+	private final void setDescripcion(String descripcion) {
 		this.descripcion = UtilText.applyTrim(descripcion);
 	}
-	
-	public final LocalTime getHoraCreacion() {
+
+	public final Date getHoraCreacion() {
 		return horaCreacion;
 	}
-	
-	public final void setHoraCreacion(LocalTime horaCreacion) {
-		this.horaCreacion = UtilDateTime.getDefaultLocalTime(horaCreacion);
+
+	private final void setHoraCreacion(Date horaCreacion) {
+		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
 	}
+
+	
+	
+	
+	
 	
 	
 	

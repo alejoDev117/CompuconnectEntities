@@ -1,8 +1,5 @@
-
 package co.edu.uco.compuconnect.entities;
 
-
-import java.time.LocalTime;
 import java.util.Date;
 import java.util.UUID;
 
@@ -14,14 +11,15 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 public final class SolicitudEntity {
 	
 	private static final SolicitudEntity DEFAULT_OBJECT = new SolicitudEntity();
+	private TipoSolicitudEntity tipoSolicitud;
+	private EstadoSolicitudEntity estadoSolicitud;
 	private UUID identificador;
 	private UsuarioEntity autor;
 	private String descripcion;
-	private LocalTime horaCreacion;
-	private TipoSolicitudEntity tipoSolicitud;
-	private EstadoSolicitudEntity estadoSolicitud;
+	private Date horaCreacion;
 	
-	public SolicitudEntity(UUID identificador, UsuarioEntity autor, TipoSolicitudEntity tipoSolicitud, String descripcion, LocalTime horaCreacion, EstadoSolicitudEntity estadoSolicitud) {
+	
+	public SolicitudEntity(UUID identificador, UsuarioEntity autor, TipoSolicitudEntity tipoSolicitud, String descripcion, Date horaCreacion, EstadoSolicitudEntity estadoSolicitud) {
 		setIdentificador(identificador);
 		setAutor(autor);
 		setTipoSolicitud(tipoSolicitud);
@@ -32,13 +30,13 @@ public final class SolicitudEntity {
 	}
 	
 	
-	public SolicitudEntity() {
+	private SolicitudEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAutor(UsuarioEntity.getDeafaulObject());
 		setTipoSolicitud(TipoSolicitudEntity.getDefaultObject());
 		setDescripcion(UtilText.getDefaultValue());
-		setHoraCreacion(UtilDateTime.getDefaultValueLocaltime());
+		setHoraCreacion(UtilDateTime.getDefaultValueDate());
 		setEstadoSolicitud(EstadoSolicitudEntity.getDefaultObject());
 		
 	}
@@ -84,14 +82,13 @@ public final class SolicitudEntity {
 	}
 
 
-	public LocalTime getHoraCreacion() {
+	public Date getHoraCreacion() {
 		return horaCreacion;
 	}
 
 
-
-	private final void setHoraCreacion(LocalTime horaCreacion) {
-		this.horaCreacion = UtilDateTime.getDefaultLocalTime(horaCreacion);
+	private final void setHoraCreacion(Date horaCreacion) {
+		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
 		
 	}
 
@@ -99,7 +96,7 @@ public final class SolicitudEntity {
 		return tipoSolicitud;
 	}
 
-	public final void setTipoSolicitud(TipoSolicitudEntity tipoSolicitud) {
+	private final void setTipoSolicitud(TipoSolicitudEntity tipoSolicitud) {
 		this.tipoSolicitud = UtilObject.getDefault(tipoSolicitud, TipoSolicitudEntity.getDefaultObject());
 
 	}
@@ -108,7 +105,7 @@ public final class SolicitudEntity {
 		return estadoSolicitud;
 	}
 
-	public final void setEstadoSolicitud(EstadoSolicitudEntity estadoSolicitud) {
+	private final void setEstadoSolicitud(EstadoSolicitudEntity estadoSolicitud) {
 		this.estadoSolicitud = UtilObject.getDefault(estadoSolicitud, EstadoSolicitudEntity.getDefaultObject());
 	
 	}

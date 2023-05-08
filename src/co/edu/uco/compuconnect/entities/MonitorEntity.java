@@ -7,9 +7,16 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class MonitorEntity extends PersonaEncargadaEntity {
-
-	private static final MonitorEntity DEAFAULT_OBJECT = new MonitorEntity();
+public final class MonitorEntity {
+	
+	
+	private UUID identificador;
+	private String nombre;
+	private String identificacion;
+	private TipoIdentificacionEntity tipoIdentificacion;
+	private String correoInstitucional;
+	private String numeroCelular;
+	private static final MonitorEntity DEFAULT_OBJECT = new MonitorEntity();
 	
 	public MonitorEntity(UUID identificador, String nombre, TipoIdentificacionEntity tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular) {
 		super();
@@ -39,7 +46,7 @@ public final class MonitorEntity extends PersonaEncargadaEntity {
 	
 	
 	public static final MonitorEntity getDeafaultObject() {
-		return DEAFAULT_OBJECT;
+		return DEFAULT_OBJECT;
 	}
 
 
