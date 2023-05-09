@@ -11,17 +11,13 @@ public final class DestinatarioEntity {
 	
 	private UUID identificador;
 	private String correoInstitucional;
-	private String identificacion;
-	private TipoIdentificacionEntity tipoIdentificacion;
 	private String nombre;
 	private static final DestinatarioEntity DEFAULT_OBJECT = new DestinatarioEntity();
 	
-	public DestinatarioEntity(UUID identificador, String correoInstitucional, String identificacion,TipoIdentificacionEntity tipoIdentificacion, String nombre) {
+	public DestinatarioEntity(UUID identificador, String correoInstitucional, String nombre) {
 		super();
 		setIdentificador(identificador);
 		setCorreoInstitucional(correoInstitucional);
-		setIdentificacion(identificacion);
-		setTipoIdentificacion(tipoIdentificacion);
 		setNombre(nombre);
 	}
 	
@@ -29,8 +25,6 @@ public final class DestinatarioEntity {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setCorreoInstitucional(UtilMail.getDefaultValueMail());
-		setIdentificacion(UtilText.getDefaultValue());
-		setTipoIdentificacion(TipoIdentificacionEntity.getDefaultObject());
 		setNombre(UtilText.getDefaultValue());
 	}
 	
@@ -54,21 +48,6 @@ public final class DestinatarioEntity {
 		this.correoInstitucional = UtilText.applyTrim(correoInstitucional);
 	}
 
-	public final String getIdentificacion() {
-		return identificacion;
-	}
-
-	private final void setIdentificacion(String identificacion) {
-		this.identificacion = UtilText.applyTrim(identificacion);
-	}
-
-	public final TipoIdentificacionEntity getTipoIdentificacion() {
-		return tipoIdentificacion;
-	}
-
-	private final void setTipoIdentificacion(TipoIdentificacionEntity tipoIdentificacion) {
-		this.tipoIdentificacion = UtilObject.getDefault(tipoIdentificacion,TipoIdentificacionEntity.getDefaultObject());
-	}
 
 	public final String getNombre() {
 		return nombre;
