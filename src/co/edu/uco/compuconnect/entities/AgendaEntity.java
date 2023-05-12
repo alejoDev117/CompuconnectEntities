@@ -29,7 +29,7 @@ public class AgendaEntity {
 		setNombre(nombre);
 	}
 
-	private AgendaEntity() {
+	public AgendaEntity() {
 		super();	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setPeriodoFuncionamiento(PeriodoFuncionamientoEntity.getDefaultObject());
