@@ -21,7 +21,7 @@ public class EstadoEquipoComputoEntity {
 		setDescripcion(descripcion);
 	}
 	
-	private EstadoEquipoComputoEntity() { 
+	public EstadoEquipoComputoEntity() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getDefaultValue());
@@ -40,7 +40,7 @@ public class EstadoEquipoComputoEntity {
 		return identificador;
 	}
 	
-	private final void setIdentificador(final UUID identificador) {
+	public final void setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
 	
 	}
@@ -48,7 +48,7 @@ public class EstadoEquipoComputoEntity {
 		return nombre;
 	}
 	
-	private final void setNombre(final String nombre) {
+	public final void setNombre(final String nombre) {
 		this.nombre = UtilText.applyTrim(nombre) ;
 		
 	}
@@ -57,7 +57,7 @@ public class EstadoEquipoComputoEntity {
 		return descripcion;
 	}
 	
-	private final void setDescripcion(final String descripcion) {
+	public final void setDescripcion(final String descripcion) {
 		this.descripcion = UtilText.applyTrim(descripcion);
 	
 	}
