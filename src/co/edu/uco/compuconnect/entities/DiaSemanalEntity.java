@@ -23,7 +23,7 @@ public class DiaSemanalEntity {
 	private  DiaSemanalEntity() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 	}
 	
 	
@@ -45,7 +45,7 @@ public class DiaSemanalEntity {
 	}
 	
 	private final void setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre) ;
+		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
 	
 	}
 	

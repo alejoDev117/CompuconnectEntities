@@ -25,7 +25,7 @@ public class DiaFestivoEntity {
 	private  DiaFestivoEntity() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 		setFecha(UtilDateTime.getDefaultValueDate());
 	}
 	
@@ -51,7 +51,7 @@ public class DiaFestivoEntity {
 	}
 	
 	private final void setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre) ;
+		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
 		
 	}
 	

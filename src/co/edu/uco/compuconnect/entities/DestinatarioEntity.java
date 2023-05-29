@@ -25,7 +25,7 @@ public final class DestinatarioEntity {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setCorreoInstitucional(UtilMail.getDefaultValueMail());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 	}
 	
 	public static final DestinatarioEntity getDefaultObject() {
@@ -45,7 +45,7 @@ public final class DestinatarioEntity {
 	}
 
 	private final void setCorreoInstitucional(String correoInstitucional) {
-		this.correoInstitucional = UtilText.applyTrim(correoInstitucional);
+		this.correoInstitucional = UtilText.getUtilText().applyTrim(correoInstitucional);
 	}
 
 
@@ -54,7 +54,7 @@ public final class DestinatarioEntity {
 	}
 
 	private final void setNombre(String nombre) {
-		this.nombre = UtilText.applyTrim(nombre);
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 	}
 	
 	

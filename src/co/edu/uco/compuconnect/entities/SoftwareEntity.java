@@ -25,8 +25,8 @@ public final class SoftwareEntity {
 	private SoftwareEntity() {
 		super();	
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
-		setVersion(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
+		setVersion(UtilText.getUtilText().getDefaultValue());
 		}
 	
 	public static final SoftwareEntity getDefaultObject() {
@@ -57,7 +57,7 @@ public final class SoftwareEntity {
 	
 
 	private final void setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre);
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 		
 	}
 
@@ -70,7 +70,7 @@ public final class SoftwareEntity {
 
 	
 	private final void setVersion(final String version) {
-		this.version = UtilText.applyTrim(version);
+		this.version = UtilText.getUtilText().applyTrim(version);
 	
 	}
 	

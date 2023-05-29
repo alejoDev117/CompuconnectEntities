@@ -25,8 +25,8 @@ public class TipoNotificacionEntity {
 	private TipoNotificacionEntity() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
-		setDescripcion(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
+		setDescripcion(UtilText.getUtilText().getDefaultValue());
 	}
 	
 	
@@ -51,7 +51,7 @@ public class TipoNotificacionEntity {
 	}
 	
 	private final void setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre) ;
+		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
 		
 	}
 	
@@ -60,7 +60,7 @@ public class TipoNotificacionEntity {
 	}
 	
 	private final void setDescripcion(final String descripcion) {
-		this.descripcion = UtilText.applyTrim(descripcion);
+		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
 		
 	}
 	

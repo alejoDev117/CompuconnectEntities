@@ -42,7 +42,7 @@ public class ExcepcionEntity {
 		setHoraInicio(UtilDateTime.getDefaultValueLocaltime());
 		setHoraFin(UtilDateTime.getDefaultValueLocaltime());
 		setFrecuencia(FrecuenciaEntity.getDefaultObject());
-		
+		setMotivo(UtilText.getUtilText().getDefaultValue());
 		
 		}
 	
@@ -114,7 +114,7 @@ public class ExcepcionEntity {
 	}
 	
 	private final void setMotivo(final String motivo) {
-		this.motivo = UtilText.applyTrim(motivo);
+		this.motivo = UtilText.getUtilText().applyTrim(motivo);
 	
 	}
 	

@@ -37,8 +37,8 @@ public final class CentroInformaticaEntity {
 	private  CentroInformaticaEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
-		setUbicacion(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
+		setUbicacion(UtilText.getUtilText().getDefaultValue());
 		setPoseeVideoBeam(UtilBoolean.getDefaultValue());
 		
 	}
@@ -62,7 +62,7 @@ public final class CentroInformaticaEntity {
 	}
 	
 	private final  void  setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre);
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 		
 	}
 	
@@ -70,7 +70,7 @@ public final class CentroInformaticaEntity {
 		return ubicacion;
 	}
 	private final  void  setUbicacion(final String ubicacion) {
-		this.ubicacion = UtilText.applyTrim(ubicacion);
+		this.ubicacion = UtilText.getUtilText().applyTrim(ubicacion);
 		
 	}
 	

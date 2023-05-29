@@ -25,7 +25,7 @@ public final class ContenidoEntity {
 	public ContenidoEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setDescripcion(UtilText.getDefaultValue());
+		setDescripcion(UtilText.getUtilText().getDefaultValue());
 	}
 	
 	public static final ContenidoEntity getDeafaultObject() {
@@ -47,7 +47,7 @@ public final class ContenidoEntity {
 	}
 
 	private final void setDescripcion(String descripcion) {
-		this.descripcion = UtilText.applyTrim(descripcion);
+		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
 	}
 	
 	

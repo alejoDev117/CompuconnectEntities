@@ -47,7 +47,7 @@ public final class ReservaEntity{
 		setFechaFin(UtilDateTime.getDefaultValueDate());
 		setFrecuencia(FrecuenciaEntity.getDefaultObject());
 		setCentroInformatica(CentroInformaticaEntity.getDefaultObject());
-		setDescripcion(UtilText.getDefaultValue());
+		setDescripcion(UtilText.getUtilText().getDefaultValue());
 		setHoraCreacion(UtilDateTime.getDefaultValueDate());
 	}
 	
@@ -87,7 +87,7 @@ public final class ReservaEntity{
 
 	
 	private final void  setDescripcion(String descripcion) {
-		this.descripcion = UtilText.applyTrim(descripcion);
+		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
 		
 	}
 

@@ -25,9 +25,9 @@ public final class PersonaEncargadaEntity {
 	
 	public PersonaEncargadaEntity() {
 		super();
-		setNumeroCelular(UtilText.getDefaultValue());
+		setNumeroCelular(UtilText.getUtilText().getDefaultValue());
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 		setCorreoInstitucional(UtilMail.getDefaultValueMail());
 	}
 	
@@ -40,7 +40,7 @@ public final class PersonaEncargadaEntity {
 	}
 
 	private final void setNumeroCelular(String numeroCelular) {
-		this.numeroCelular = UtilText.applyTrim(numeroCelular);
+		this.numeroCelular = UtilText.getUtilText().applyTrim(numeroCelular);
 	}
 
 	public final UUID getIdentificador() {
@@ -56,7 +56,7 @@ public final class PersonaEncargadaEntity {
 	}
 
 	private final void setNombre(String nombre) {
-		this.nombre = UtilText.applyTrim(nombre);
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 	}
 
 	public final String getCorreoInstitucional() {
@@ -64,7 +64,7 @@ public final class PersonaEncargadaEntity {
 	}
 
 	public final void setCorreoInstitucional(String correoInstitucional) {
-		this.correoInstitucional = UtilText.applyTrim(correoInstitucional);
+		this.correoInstitucional = UtilText.getUtilText().applyTrim(correoInstitucional);
 	}
 	
 	

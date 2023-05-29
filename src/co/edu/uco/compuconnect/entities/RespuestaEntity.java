@@ -31,7 +31,7 @@ public class RespuestaEntity {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAutor(CoordinadorEntity.getDefaultObject());
-		setObservacion(UtilText.getDefaultValue());
+		setObservacion(UtilText.getUtilText().getDefaultValue());
 		setFecha(UtilDateTime.getDefaultValueDate());
 	}
 	
@@ -67,7 +67,7 @@ public class RespuestaEntity {
 
 
 	private final void setObservacion(String observacion) {
-		this.observacion = UtilText.applyTrim(observacion);
+		this.observacion = UtilText.getUtilText().applyTrim(observacion);
 	}
 
 

@@ -25,7 +25,7 @@ public class EquipoComputoEntity {
 	private EquipoComputoEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 		setEstado(EstadoEquipoComputoEntity.getDefaultObject());
 
 	}
@@ -57,7 +57,7 @@ public class EquipoComputoEntity {
 	
 	
 	private final void setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre) ;
+		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
 
 	}
 	

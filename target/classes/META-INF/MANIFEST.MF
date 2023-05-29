@@ -1,9 +1,5 @@
 Manifest-Version: 1.0
 Built-By: USUARIO
-<<<<<<< HEAD
 Build-Jdk: 19.0.2
-=======
-Build-Jdk: 17.0.7
->>>>>>> 17333dadec47bc1a691eb1c7d6b558d200fb9a5f
 Created-By: Maven Integration for Eclipse
 

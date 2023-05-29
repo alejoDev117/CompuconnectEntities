@@ -37,7 +37,7 @@ public final class SolicitudEntity {
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAutor(UsuarioEntity.getDeafaulObject());
 		setTipoSolicitud(TipoSolicitudEntity.getDefaultObject());
-		setDescripcion(UtilText.getDefaultValue());
+		setDescripcion(UtilText.getUtilText().getDefaultValue());
 		setHoraCreacion(UtilDateTime.getDefaultValueDate());
 		setEstadoSolicitud(EstadoSolicitudEntity.getDefaultObject());
 		
@@ -79,7 +79,7 @@ public final class SolicitudEntity {
 
 	
 	private final void  setDescripcion(String descripcion) {
-		this.descripcion = UtilText.applyTrim(descripcion);
+		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
 		
 	}
 

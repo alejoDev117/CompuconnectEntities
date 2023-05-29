@@ -37,11 +37,11 @@ public final class CoordinadorEntity{
 	private CoordinadorEntity() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 		setTipoIdentificacion(TipoIdentificacionEntity.getDefaultObject());
-		setIdentificacion(UtilText.getDefaultValue());
+		setIdentificacion(UtilText.getUtilText().getDefaultValue());
 		setCorreoInstitucional(UtilMail.getDefaultValueMail());
-		setNumeroCelular(UtilText.getDefaultValue());
+		setNumeroCelular(UtilText.getUtilText().getDefaultValue());
 		setTipoUsuario(TipoUsuarioEntity.getDefaultObject());
 		
 	}
@@ -70,7 +70,7 @@ public final class CoordinadorEntity{
 
 	
 	private final void  setCorreoInstitucional(String correoInstitucional) {
-		this.correoInstitucional = UtilText.applyTrim(correoInstitucional);
+		this.correoInstitucional = UtilText.getUtilText().applyTrim(correoInstitucional);
 		
 	}
 
@@ -81,7 +81,7 @@ public final class CoordinadorEntity{
 
 	
 	private final void setIdentificacion(String identificacion) {
-		this.identificacion = UtilText.applyTrim(identificacion);
+		this.identificacion = UtilText.getUtilText().applyTrim(identificacion);
 		
 	}
 
@@ -103,7 +103,7 @@ public final class CoordinadorEntity{
 
 	
 	private final void setNombre(String nombre) {
-		this.nombre = UtilText.applyTrim(nombre);
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 		
 	}
 
@@ -115,7 +115,7 @@ public final class CoordinadorEntity{
 
 
 	private final void  setNumeroCelular(String numeroCelular) {
-		this.numeroCelular = UtilText.applyTrim(numeroCelular);
+		this.numeroCelular = UtilText.getUtilText().applyTrim(numeroCelular);
 		
 	}
 	
