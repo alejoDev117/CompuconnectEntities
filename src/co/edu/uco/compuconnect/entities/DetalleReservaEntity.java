@@ -17,9 +17,7 @@ public class DetalleReservaEntity {
 	private LocalTime horafin;
 	
 	
-	public DetalleReservaEntity(UUID identificador, ReservaEntity reserva, DiaSemanalEntity dia, LocalTime horainicio,
-			LocalTime horafin) {
-		super();
+	public DetalleReservaEntity(UUID identificador, ReservaEntity reserva, DiaSemanalEntity dia, LocalTime horainicio, LocalTime horafin) {
 		setIdentificador(identificador);
 		setReserva(reserva);
 		setDia(dia);
@@ -28,7 +26,6 @@ public class DetalleReservaEntity {
 	}
 	
 	public DetalleReservaEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setReserva(ReservaEntity.getDefaultObject());
 		setDia(DiaSemanalEntity.getDefaultObject());

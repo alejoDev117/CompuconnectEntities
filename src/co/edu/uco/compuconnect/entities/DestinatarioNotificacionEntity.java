@@ -14,7 +14,6 @@ public class DestinatarioNotificacionEntity {
 	private EstadoNotificacionEntity estado;
 	
 	public DestinatarioNotificacionEntity(final UUID identificador, final DestinatarioEntity destinatario, final NotificacionEntity notificacion, final EstadoNotificacionEntity estado) {
-		super();
 		setIdentificador(identificador);
 		setDestinatario(destinatario);
 		setNotificacion(notificacion);
@@ -22,7 +21,6 @@ public class DestinatarioNotificacionEntity {
 	}
 	
 	private DestinatarioNotificacionEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 
 		setDestinatario(DestinatarioEntity.getDefaultObject());

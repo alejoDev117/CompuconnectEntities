@@ -21,7 +21,6 @@ public final class CoordinadorEntity{
 
 	
 	public CoordinadorEntity(UUID identificador, String nombre, TipoIdentificacionEntity tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular, TipoUsuarioEntity tipoUsuario) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setTipoIdentificacion(tipoIdentificacion);
@@ -35,7 +34,6 @@ public final class CoordinadorEntity{
 
 
 	private CoordinadorEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setTipoIdentificacion(TipoIdentificacionEntity.getDefaultObject());

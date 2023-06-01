@@ -3,7 +3,6 @@ package co.edu.uco.compuconnect.entities;
 import java.util.UUID;
 
 import co.edu.uco.compuconnect.crosscutting.utils.UtilMail;
-import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
@@ -15,14 +14,12 @@ public final class DestinatarioEntity {
 	private static final DestinatarioEntity DEFAULT_OBJECT = new DestinatarioEntity();
 	
 	public DestinatarioEntity(UUID identificador, String correoInstitucional, String nombre) {
-		super();
 		setIdentificador(identificador);
 		setCorreoInstitucional(correoInstitucional);
 		setNombre(nombre);
 	}
 	
 	public DestinatarioEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setCorreoInstitucional(UtilMail.getDefaultValueMail());
 		setNombre(UtilText.getUtilText().getDefaultValue());

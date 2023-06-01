@@ -1,11 +1,8 @@
 package co.edu.uco.compuconnect.entities;
 
 
-import java.util.Date;
 import java.util.UUID;
 
-import co.edu.uco.compuconnect.crosscutting.utils.UtilDateTime;
-import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
@@ -17,13 +14,11 @@ public final class ContenidoEntity {
 	
 	
 	public ContenidoEntity(UUID identificador,String descripcion) {
-		super();
 		setIdentificador(identificador);
 		setDescripcion(descripcion);
 	}
 	
 	public ContenidoEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
 	}
