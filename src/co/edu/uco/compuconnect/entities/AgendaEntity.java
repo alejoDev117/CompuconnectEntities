@@ -32,6 +32,10 @@ public class AgendaEntity {
 		
 	}
 	
+	public static final AgendaEntity create() {
+		return new AgendaEntity();
+	}
+	
 	
 	
 	public static final AgendaEntity getDefaultObject() {
@@ -43,8 +47,9 @@ public class AgendaEntity {
 	}
 	
 	
-	private final void setIdentificador(final UUID identificador) {
+	public final AgendaEntity setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 		
 		
 	}
@@ -54,8 +59,9 @@ public class AgendaEntity {
 		return periodoFuncionamiento;
 	}
 	
-	private final void setPeriodoFuncionamiento(final PeriodoFuncionamientoEntity periodoFuncionamiento) {
+	public final AgendaEntity setPeriodoFuncionamiento(final PeriodoFuncionamientoEntity periodoFuncionamiento) {
 		this.periodoFuncionamiento = UtilObject.getDefault(periodoFuncionamiento, PeriodoFuncionamientoEntity.getDefaultObject());
+		return this;
 		
 	}
 	
@@ -64,8 +70,9 @@ public class AgendaEntity {
 		return centroInformatica;
 	}
 	
-	private final void setCentroInformatica(final CentroInformaticaEntity centroInformatica) {
+	public final AgendaEntity setCentroInformatica(final CentroInformaticaEntity centroInformatica) {
 		this.centroInformatica = UtilObject.getDefault(centroInformatica, CentroInformaticaEntity.getDefaultObject());
+		return this;
 	
 	}
 	
@@ -73,8 +80,9 @@ public class AgendaEntity {
 	public String getNombre() {
 		return nombre;
 	}
-	private final void setNombre(final String nombre) {
-		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
+	public final AgendaEntity setNombre(final String nombre) {
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
+		return this;
 		
 	}
 

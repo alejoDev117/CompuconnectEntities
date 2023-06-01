@@ -39,7 +39,9 @@ public final class UsuarioEntity {
 	}
 	
 	
-	
+	public static final UsuarioEntity create() {
+		return new UsuarioEntity();
+	}
 	
 	
 	public static final UsuarioEntity getDeafaulObject() {
@@ -53,8 +55,9 @@ public final class UsuarioEntity {
 
 
 
-	private final void setTipoUsuario(TipoUsuarioEntity tipoUsuario) {
+	public final UsuarioEntity setTipoUsuario(TipoUsuarioEntity tipoUsuario) {
 		this.tipoUsuario = UtilObject.getDefault(tipoUsuario, TipoUsuarioEntity.getDefaultObject());
+		return this;
 		
 	}
 
@@ -67,8 +70,9 @@ public final class UsuarioEntity {
 	}
 
 	
-	private void setIdentificador(UUID identificador) {
+	public UsuarioEntity setIdentificador(UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 		
 	}
 
@@ -78,8 +82,9 @@ public final class UsuarioEntity {
 	}
 
 
-	private void setCorreoInstitucional(String correoInstitucional) {
+	public UsuarioEntity setCorreoInstitucional(String correoInstitucional) {
 		this.correoInstitucional = UtilText.getUtilText().applyTrim(correoInstitucional);
+		return this;
 		
 	}
 
@@ -90,8 +95,9 @@ public final class UsuarioEntity {
 	}
 
 	
-	private void setIdentificacion(String identificacion) {
+	public UsuarioEntity setIdentificacion(String identificacion) {
 		this.identificacion = UtilText.getUtilText().applyTrim(identificacion);
+		return this;
 		
 	}
 
@@ -101,8 +107,9 @@ public final class UsuarioEntity {
 	}
 
 	
-	private void setTipoIdentificacion(TipoIdentificacionEntity tipoIdentificacion) {
+	public UsuarioEntity setTipoIdentificacion(TipoIdentificacionEntity tipoIdentificacion) {
 		this.tipoIdentificacion = UtilObject.getDefault(tipoIdentificacion, TipoIdentificacionEntity.getDefaultObject());
+		return this;
 	}
 	
 
@@ -112,8 +119,9 @@ public final class UsuarioEntity {
 	}
 
 	
-	private final void   setNombre(String nombre) {
+	public final UsuarioEntity   setNombre(String nombre) {
 		this.nombre = UtilText.getUtilText().applyTrim(nombre);
+		return this;
 	
 	}
 

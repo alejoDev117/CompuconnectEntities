@@ -33,6 +33,9 @@ public class DetalleReservaEntity {
 		setHorafin(UtilDateTime.getDefaultValueLocaltime());
 	}
 	
+	public static final DetalleReservaEntity create() {
+		return new DetalleReservaEntity();
+	}
 	public static final DetalleReservaEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}
@@ -41,40 +44,45 @@ public class DetalleReservaEntity {
 		return identificador;
 	}
 
-	public final void setIdentificador(final UUID identificador) {
+	public final DetalleReservaEntity setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 	}
 
 	public final ReservaEntity getReserva() {
 		return reserva;
 	}
 
-	public final void setReserva(ReservaEntity reserva) {
+	public final DetalleReservaEntity setReserva(ReservaEntity reserva) {
 		this.reserva = UtilObject.getDefault(reserva, ReservaEntity.getDefaultObject());
+		return this;
 	}
 
 	public final DiaSemanalEntity getDia() {
 		return dia;
 	}
 
-	public final void setDia(DiaSemanalEntity dia) {
+	public final DetalleReservaEntity setDia(DiaSemanalEntity dia) {
 		this.dia = UtilObject.getDefault(dia, DiaSemanalEntity.getDefaultObject());
+		return this;
 	}
 
 	public final LocalTime getHorainicio() {
 		return horainicio;
 	}
 
-	public final void setHorainicio(LocalTime horainicio) {
+	public final DetalleReservaEntity setHorainicio(LocalTime horainicio) {
 		this.horainicio = UtilDateTime.getDefaultLocalTime(horainicio);
+		return this;
 	}
 
 	public final LocalTime getHorafin() {
 		return horafin;
 	}
 
-	public final void setHorafin(LocalTime horafin) {
+	public final DetalleReservaEntity setHorafin(LocalTime horafin) {
 		this.horafin = UtilDateTime.getDefaultLocalTime(horafin);
+		return this;
 	}
 	
 	

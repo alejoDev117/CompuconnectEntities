@@ -48,7 +48,9 @@ public final class ReservaEntity{
 		setHoraCreacion(UtilDateTime.getDefaultValueDate());
 	}
 	
-	
+	public static final ReservaEntity create() {
+		return new ReservaEntity();
+	}
 	
 	
 	public static final ReservaEntity getDefaultObject() {
@@ -60,8 +62,9 @@ public final class ReservaEntity{
 	}
 
 
-	private final void  setIdentificador(UUID identificador) {
+	public final ReservaEntity  setIdentificador(UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 		
 	}
 	
@@ -72,8 +75,9 @@ public final class ReservaEntity{
 	}
 
 
-	private final  void setAutor(UsuarioEntity autor) {
+	public final  ReservaEntity setAutor(UsuarioEntity autor) {
 		this.autor = UtilObject.getDefault(autor, UsuarioEntity.getDeafaulObject());
+		return this;
 		
 	}
 
@@ -83,8 +87,9 @@ public final class ReservaEntity{
 	}
 
 	
-	private final void  setDescripcion(String descripcion) {
+	public final ReservaEntity  setDescripcion(String descripcion) {
 		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
+		return this;
 		
 	}
 
@@ -94,8 +99,9 @@ public final class ReservaEntity{
 	}
 
 
-	private final void   setHoraCreacion(Date horaCreacion) {
+	public final ReservaEntity   setHoraCreacion(Date horaCreacion) {
 		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
+		return this;
 		
 	}
 
@@ -105,8 +111,9 @@ public final class ReservaEntity{
 		return tipoReserva;
 	}
 
-	private final void setTipoReserva(TipoReservaEntity tipoReserva) {
+	public final ReservaEntity setTipoReserva(TipoReservaEntity tipoReserva) {
 		this.tipoReserva = UtilObject.getDefault(tipoReserva, TipoReservaEntity.getDefaultObject());
+		return this;
 		
 	}
 
@@ -114,8 +121,9 @@ public final class ReservaEntity{
 		return fechaInicio;
 	}
 
-	private final void setFechaInicio(Date fechaInicio) {
+	public final ReservaEntity setFechaInicio(Date fechaInicio) {
 		this.fechaInicio = UtilDateTime.getDefaultDate(fechaInicio);
+		return this;
 		
 	}
 
@@ -123,8 +131,9 @@ public final class ReservaEntity{
 		return fechaFin;
 	}
 
-	private final void setFechaFin(Date fechaFin) {
+	public final ReservaEntity setFechaFin(Date fechaFin) {
 		this.fechaFin = UtilDateTime.getDefaultDate(fechaFin);
+		return this;
 		
 	}
 
@@ -132,8 +141,9 @@ public final class ReservaEntity{
 		return frecuencia;
 	}
 
-	private final void setFrecuencia(FrecuenciaEntity frecuencia) {
+	public final ReservaEntity setFrecuencia(FrecuenciaEntity frecuencia) {
 		this.frecuencia = UtilObject.getDefault(frecuencia, FrecuenciaEntity.getDefaultObject());
+		return this;
 	
 	}
 
@@ -141,8 +151,9 @@ public final class ReservaEntity{
 		return centroInformatica;
 	}
 
-	private final void setCentroInformatica(CentroInformaticaEntity centroInformatica) {
+	public final ReservaEntity setCentroInformatica(CentroInformaticaEntity centroInformatica) {
 		this.centroInformatica = UtilObject.getDefault(centroInformatica, CentroInformaticaEntity.getDefaultObject());
+		return this;
 		
 	}
 	

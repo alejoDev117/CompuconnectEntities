@@ -25,6 +25,9 @@ public class AgendaReservaEntity {
 		setReserva(ReservaEntity.getDefaultObject());
 	}
 	
+	public static final AgendaReservaEntity create() {
+		return new AgendaReservaEntity();
+	}
 	public static final AgendaReservaEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
 	}
@@ -33,24 +36,27 @@ public class AgendaReservaEntity {
 		return identificador;
 	}
 
-	private final void setIdentificador(final UUID identificador) {
+	public final AgendaReservaEntity setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 	}
 
 	public final AgendaEntity getAgenda() {
 		return agenda;
 	}
 
-	private final void setAgenda(final AgendaEntity agenda) {
+	public final AgendaReservaEntity setAgenda(final AgendaEntity agenda) {
 		this.agenda = UtilObject.getDefault(agenda, AgendaEntity.getDefaultObject());
+		return this;
 	}
 
 	public final ReservaEntity getReserva() {
 		return reserva;
 	}
 
-	private final void setReserva(final ReservaEntity reserva) {
+	public final AgendaReservaEntity setReserva(final ReservaEntity reserva) {
 		this.reserva = UtilObject.getDefault(reserva, ReservaEntity.getDefaultObject());
+		return this;
 	}
 	
 	
