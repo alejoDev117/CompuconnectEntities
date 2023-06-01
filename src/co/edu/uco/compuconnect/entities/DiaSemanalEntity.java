@@ -1,9 +1,7 @@
 package co.edu.uco.compuconnect.entities;
 
-import java.util.Date;
 import java.util.UUID;
 
-import co.edu.uco.compuconnect.crosscutting.utils.UtilDateTime;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
@@ -15,13 +13,11 @@ public class DiaSemanalEntity {
 	
 	
 	public DiaSemanalEntity(UUID identificador, String nombre) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 	}
 	
 	private  DiaSemanalEntity() { 
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 	}

@@ -14,7 +14,6 @@ public class EquipoComputoEntity {
 	private EstadoEquipoComputoEntity estado;
 	
 	public EquipoComputoEntity(final UUID identificador,final String nombre,final EstadoEquipoComputoEntity estado) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setEstado(estado);
@@ -23,17 +22,11 @@ public class EquipoComputoEntity {
 	
 	
 	private EquipoComputoEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setEstado(EstadoEquipoComputoEntity.getDefaultObject());
 
 	}
-	
-	
-	
-	
-	
 	
 	
 	public static final EquipoComputoEntity getDefaultObject() {
