@@ -32,22 +32,26 @@ public class TipoIdentificacionEntity {
 		return DEFAULT_OBJECT;
 	}
 
-	
+	public static final TipoIdentificacionEntity create(){
+		return new TipoIdentificacionEntity();
+	}
 	
 	public final UUID getIdentificador() {
 		return identificador;
 	}
 	
-	private final void setIdentificador(final UUID identificador) {
+	public final TipoIdentificacionEntity setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 		
 	}
 	public final String getNombre() {
 		return nombre;
 	}
 	
-	private final void setNombre(final String nombre) {
+	public final TipoIdentificacionEntity setNombre(final String nombre) {
 		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
+		return this;
 	
 	}
 	
@@ -55,8 +59,9 @@ public class TipoIdentificacionEntity {
 		return descripcion;
 	}
 	
-	private final void setDescripcion(final String descripcion) {
+	public final TipoIdentificacionEntity setDescripcion(final String descripcion) {
 		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
+		return this;
 	
 	}
 	

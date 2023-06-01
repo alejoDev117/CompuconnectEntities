@@ -30,7 +30,7 @@ public class PeriodoFuncionamientoEntity {
 	}
 
 
-	public PeriodoFuncionamientoEntity() {	
+	private PeriodoFuncionamientoEntity() {	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setFechaInicio(UtilDateTime.getDefaultValueDate());
