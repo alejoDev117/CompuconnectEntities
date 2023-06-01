@@ -56,7 +56,7 @@ public class PeriodoFuncionamientoEntity {
 	}
 	
 	
-	private final PeriodoFuncionamientoEntity setIdentificador(final UUID identificador) {
+	public final PeriodoFuncionamientoEntity setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
 		return this;
 		
@@ -67,7 +67,7 @@ public class PeriodoFuncionamientoEntity {
 		return nombre;
 	}
 	
-	private final PeriodoFuncionamientoEntity setNombre(final String nombre) {
+	public final PeriodoFuncionamientoEntity setNombre(final String nombre) {
 		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 		return this;
 		
@@ -78,7 +78,7 @@ public class PeriodoFuncionamientoEntity {
 	}
 	
 	
-	private final PeriodoFuncionamientoEntity setFechaInicio(final Date fechaInicio) {
+	public final PeriodoFuncionamientoEntity setFechaInicio(final Date fechaInicio) {
 		this.fechaInicio = UtilDateTime.getDefaultDate(fechaInicio);
 		return this;
 		
@@ -89,7 +89,7 @@ public class PeriodoFuncionamientoEntity {
 		return fechaFin;
 	}
 	
-	private final PeriodoFuncionamientoEntity setFechaFin(final Date fechaFin) {
+	public final PeriodoFuncionamientoEntity setFechaFin(final Date fechaFin) {
 		this.fechaFin = UtilDateTime.getDefaultDate(fechaFin);
 		return this;
 		
@@ -101,7 +101,7 @@ public class PeriodoFuncionamientoEntity {
 	}
 	
 	
-	private PeriodoFuncionamientoEntity setDiaFestivo(final DiaFestivoEntity diaFestivo) {
+	public PeriodoFuncionamientoEntity setDiaFestivo(final DiaFestivoEntity diaFestivo) {
 		this.diaFestivo = UtilObject.getDefault(diaFestivo, DiaFestivoEntity.getDefaultObject());
 		return this;
 		
@@ -114,7 +114,7 @@ public class PeriodoFuncionamientoEntity {
 	}
 	
 	
-	private  PeriodoFuncionamientoEntity setEstado(EstadoPeriodoFuncionamientoEntity estado) {
+	public  PeriodoFuncionamientoEntity setEstado(EstadoPeriodoFuncionamientoEntity estado) {
 		this.estado = UtilObject.getDefault(estado, EstadoPeriodoFuncionamientoEntity.getDefaultObject());
 		return this;
 		

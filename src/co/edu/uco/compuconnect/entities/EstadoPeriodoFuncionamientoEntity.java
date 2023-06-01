@@ -25,7 +25,9 @@ public class EstadoPeriodoFuncionamientoEntity {
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
 	}
 	
-	
+	public static final EstadoPeriodoFuncionamientoEntity create() {
+		return new EstadoPeriodoFuncionamientoEntity();
+	}
 	
 	public static final EstadoPeriodoFuncionamientoEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
@@ -35,8 +37,9 @@ public class EstadoPeriodoFuncionamientoEntity {
 		return identificador;
 	}
 	
-	private final void setIdentificador(final UUID identificador) {
+	public final EstadoPeriodoFuncionamientoEntity setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 	
 	}
 	
@@ -44,8 +47,9 @@ public class EstadoPeriodoFuncionamientoEntity {
 		return nombre;
 	}
 	
-	private final void setNombre(final String nombre) {
+	public final EstadoPeriodoFuncionamientoEntity setNombre(final String nombre) {
 		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
+		return this;
 		
 	}
 	
@@ -53,8 +57,9 @@ public class EstadoPeriodoFuncionamientoEntity {
 		return descripcion;
 	}
 	
-	private final void setDescripcion(final String descripcion) {
+	public final EstadoPeriodoFuncionamientoEntity setDescripcion(final String descripcion) {
 		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
+		return this;
 		
 	}
 	
