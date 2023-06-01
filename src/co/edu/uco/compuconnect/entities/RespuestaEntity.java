@@ -18,7 +18,6 @@ public class RespuestaEntity {
 
 	
 	public RespuestaEntity(final UUID identificador, final CoordinadorEntity autor, final String observacion, final Date fecha ) {
-		super();
 		setIdentificador(identificador);
 		setAutor(autor);
 		setObservacion(observacion);
@@ -28,7 +27,6 @@ public class RespuestaEntity {
 	
 	
 	private RespuestaEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAutor(CoordinadorEntity.getDefaultObject());
 		setObservacion(UtilText.getUtilText().getDefaultValue());

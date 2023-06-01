@@ -1,7 +1,5 @@
 package co.edu.uco.compuconnect.entities;
 
-
-
 import java.util.Date;
 
 import java.util.UUID;
@@ -39,7 +37,6 @@ public final class ReservaEntity{
 	}
 	
 	private ReservaEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAutor(UsuarioEntity.getDeafaulObject());
 		setTipoReserva(TipoReservaEntity.getDefaultObject());

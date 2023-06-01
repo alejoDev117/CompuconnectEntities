@@ -16,7 +16,6 @@ public final class PersonaEncargadaEntity {
 	
 	
 	public PersonaEncargadaEntity(String numeroCelular, UUID identificador, String nombre, String correoInstitucional) {
-		super();
 		setNumeroCelular(numeroCelular);
 		setIdentificador(identificador);
 		setNombre(nombre);
@@ -24,7 +23,6 @@ public final class PersonaEncargadaEntity {
 	}
 	
 	public PersonaEncargadaEntity() {
-		super();
 		setNumeroCelular(UtilText.getUtilText().getDefaultValue());
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());

@@ -13,7 +13,6 @@ public class ReservaPerfilEntity {
 	private PerfilEntity perfil;
 	
 	public ReservaPerfilEntity(final UUID identificador, final ReservaEntity reserva, final PerfilEntity perfil) {
-		super();
 		setIdentificador(identificador);
 		setReserva(reserva);
 		setPerfil(perfil);
@@ -21,7 +20,6 @@ public class ReservaPerfilEntity {
 	
 	
 	private ReservaPerfilEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setReserva(ReservaEntity.getDefaultObject());
 		setPerfil(PerfilEntity.getDefaultObject());

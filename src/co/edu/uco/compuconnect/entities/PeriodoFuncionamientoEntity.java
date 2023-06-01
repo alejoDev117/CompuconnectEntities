@@ -21,7 +21,6 @@ public class PeriodoFuncionamientoEntity {
 	
 	
 	public PeriodoFuncionamientoEntity(UUID identificador, String nombre, Date fechaInicio, Date fechaFin, DiaFestivoEntity diaFestivo, EstadoPeriodoFuncionamientoEntity estado) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setFechaInicio(fechaInicio);
@@ -31,8 +30,7 @@ public class PeriodoFuncionamientoEntity {
 	}
 
 
-	public PeriodoFuncionamientoEntity() {
-		super();	
+	public PeriodoFuncionamientoEntity() {	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setFechaInicio(UtilDateTime.getDefaultValueDate());
@@ -86,7 +84,7 @@ public class PeriodoFuncionamientoEntity {
 		return fechaFin;
 	}
 	
-	private final void setFechaFin(final Date fechaInicio) {
+	private final void setFechaFin(final Date fechaFin) {
 		this.fechaFin = UtilDateTime.getDefaultDate(fechaFin);
 		
 	}
