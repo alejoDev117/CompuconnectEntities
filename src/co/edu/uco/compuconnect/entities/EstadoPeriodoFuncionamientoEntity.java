@@ -14,14 +14,12 @@ public class EstadoPeriodoFuncionamientoEntity {
 	
 	
 	public EstadoPeriodoFuncionamientoEntity(UUID identificador, String nombre, String descripcion) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
 	
 	private EstadoPeriodoFuncionamientoEntity() { 
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setDescripcion(UtilText.getUtilText().getDefaultValue());

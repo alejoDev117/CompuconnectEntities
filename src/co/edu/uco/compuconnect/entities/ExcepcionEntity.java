@@ -22,7 +22,6 @@ public class ExcepcionEntity {
 	private String motivo;
 	
 	public ExcepcionEntity(UUID identificador, Date fechaInicio, Date fechaFin, LocalTime horaInicio, LocalTime horaFin, FrecuenciaEntity frecuencia, String motivo) {
-		super();
 		setIdentificador(identificador);
 		setFechaInicio(fechaInicio);
 		setFechaFin(fechaFin);
@@ -35,7 +34,6 @@ public class ExcepcionEntity {
 
 
 	private ExcepcionEntity() {
-		super();	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setFechaInicio(UtilDateTime.getDefaultValueDate());
 		setFechaFin(UtilDateTime.getDefaultValueDate());
