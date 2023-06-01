@@ -15,14 +15,12 @@ public class TipoSolicitudEntity {
 	
 	
 	public TipoSolicitudEntity(UUID identificador, String nombre, String descripcion) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
 	
 	private TipoSolicitudEntity() { 
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setDescripcion(UtilText.getUtilText().getDefaultValue());

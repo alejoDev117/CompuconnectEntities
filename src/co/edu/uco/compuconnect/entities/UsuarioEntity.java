@@ -29,7 +29,6 @@ public final class UsuarioEntity {
 	}
 	
 	private  UsuarioEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setTipoUsuario(TipoUsuarioEntity.getDefaultObject());
 		setNombre(UtilText.getUtilText().getDefaultValue());
