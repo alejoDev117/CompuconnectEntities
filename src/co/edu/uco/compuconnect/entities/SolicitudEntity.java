@@ -33,7 +33,6 @@ public final class SolicitudEntity {
 	
 	
 	private SolicitudEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAutor(UsuarioEntity.getDeafaulObject());
 		setTipoSolicitud(TipoSolicitudEntity.getDefaultObject());

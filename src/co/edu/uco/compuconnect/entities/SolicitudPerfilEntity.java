@@ -13,7 +13,6 @@ public class SolicitudPerfilEntity {
 	private PerfilEntity perfil;
 	
 	public SolicitudPerfilEntity(final UUID identificador, final SolicitudEntity solicitud, final PerfilEntity perfil) {
-		super();
 		setIdentificador(identificador);
 		setSolicitud(solicitud);
 		setPerfil(perfil);
@@ -21,7 +20,6 @@ public class SolicitudPerfilEntity {
 	}
 	
 	private SolicitudPerfilEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setSolicitud(SolicitudEntity.getDefaultObject());
 		setPerfil(PerfilEntity.getDefaultObject());

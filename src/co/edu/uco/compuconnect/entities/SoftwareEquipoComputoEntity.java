@@ -16,7 +16,6 @@ public final class SoftwareEquipoComputoEntity {
 	
 	
 	public SoftwareEquipoComputoEntity(UUID identificador, SoftwareEntity software, EquipoComputoEntity equipoComputo) {
-		super();
 		setIdentificador(identificador);
 		setSoftware(software);
 		setEquipoComputo(equipoComputo);
@@ -26,7 +25,6 @@ public final class SoftwareEquipoComputoEntity {
 
 
 	private SoftwareEquipoComputoEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setSoftware(SoftwareEntity.getDefaultObject());
 		setEquipoComputo(EquipoComputoEntity.getDefaultObject());

@@ -2,13 +2,11 @@ package co.edu.uco.compuconnect.entities;
 
 import java.time.LocalTime;
 
-import java.util.Date;
 import java.util.UUID;
 
 
 import co.edu.uco.compuconnect.crosscutting.utils.UtilDateTime;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
-import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
 public class TiempoFuncionamientoCentroInformaticaEntity {
@@ -23,7 +21,6 @@ public class TiempoFuncionamientoCentroInformaticaEntity {
 	
 	
 	public TiempoFuncionamientoCentroInformaticaEntity(UUID identificador, PeriodoFuncionamientoEntity periodoFuncionamiento,CentroInformaticaEntity centroInformatica, DiaSemanalEntity dia,LocalTime horaInicio, LocalTime horaFin) {
-		super();
 		setIdentificador(identificador);
 		setPeriodoFuncionamiento(periodoFuncionamiento);
 		setCentroInformatica(centroInformatica);
@@ -35,8 +32,7 @@ public class TiempoFuncionamientoCentroInformaticaEntity {
 	}
 
 
-	private TiempoFuncionamientoCentroInformaticaEntity() {
-		super();	
+	private TiempoFuncionamientoCentroInformaticaEntity() {	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setPeriodoFuncionamiento(PeriodoFuncionamientoEntity.getDefaultObject());
 		setCentroInformatica(CentroInformaticaEntity.getDefaultObject());
@@ -74,7 +70,7 @@ public class TiempoFuncionamientoCentroInformaticaEntity {
 	}
 	
 	
-	private final void setPeriodoFuncionamiento(final PeriodoFuncionamientoEntity centroInformatica) {
+	private final void setPeriodoFuncionamiento(final PeriodoFuncionamientoEntity periodoFuncionamiento) {
 		this.periodoFuncionamiento = UtilObject.getDefault(periodoFuncionamiento, PeriodoFuncionamientoEntity.getDefaultObject());
 		
 	}

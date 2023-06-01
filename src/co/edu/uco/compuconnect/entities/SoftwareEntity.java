@@ -14,7 +14,6 @@ public final class SoftwareEntity {
 	
 	
 	public SoftwareEntity(UUID identificador, String nombre, String version) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setVersion(version);
@@ -22,8 +21,7 @@ public final class SoftwareEntity {
 
 	
 
-	private SoftwareEntity() {
-		super();	
+	private SoftwareEntity() {	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setVersion(UtilText.getUtilText().getDefaultValue());
