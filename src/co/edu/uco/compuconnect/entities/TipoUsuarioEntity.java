@@ -27,7 +27,9 @@ public class TipoUsuarioEntity {
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
 	}
 	
-	
+	public static final TipoUsuarioEntity create(){
+		return new TipoUsuarioEntity();
+	}
 	
 	public static final TipoUsuarioEntity getDefaultObject() {
 		return DEFAULT_OBJECT;
@@ -37,26 +39,27 @@ public class TipoUsuarioEntity {
 		return identificador;
 	}
 	
-	private final void setIdentificador(final UUID identificador) {
+	public final TipoUsuarioEntity setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 		
 	}
 	public final String getNombre() {
 		return nombre;
 	}
 	
-	private final void setNombre(final String nombre) {
+	public final TipoUsuarioEntity setNombre(final String nombre) {
 		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
-		
+		return this;
 	}
 	
 	public final String getDescripcion() {
 		return descripcion;
 	}
 	
-	private final void setDescripcion(final String descripcion) {
+	public final TipoUsuarioEntity setDescripcion(final String descripcion) {
 		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
-	
+		return this;
 	}
 	
 	
