@@ -16,7 +16,6 @@ public class NotificacionEntity {
 	private TipoNotificacionEntity tipo;
 	
 	public NotificacionEntity(final UUID identificador, final ContenidoEntity contenido, final Date fecha, final TipoNotificacionEntity tipo) {
-		super();
 		setIdentificador(identificador);
 		setContenido(contenido);
 		setFecha(fecha);
@@ -25,7 +24,6 @@ public class NotificacionEntity {
 	}
 	
 	private NotificacionEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setContenido(ContenidoEntity.getDeafaultObject());
 		setFecha(UtilDateTime.getDefaultValueDate());

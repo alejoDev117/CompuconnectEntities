@@ -18,7 +18,6 @@ public class HorarioPersonaEncargadaEntity {
 	
 	
 	public HorarioPersonaEncargadaEntity(UUID identificador, TiempoFuncionamientoCentroInformaticaEntity tiempoFuncionamiento, PersonaEncargadaEntity personaEncargada, LocalTime horaInicio, LocalTime horaFin) {
-		super();
 		setIdentificador(identificador);
 		setTiempoFuncionamiento(tiempoFuncionamiento);
 		setPersonaEncargada(personaEncargada);
@@ -28,7 +27,6 @@ public class HorarioPersonaEncargadaEntity {
 	}
 	
 	private HorarioPersonaEncargadaEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setTiempoFuncionamiento(TiempoFuncionamientoCentroInformaticaEntity.getDefaultObject());
 		setPersonaEncargada(PersonaEncargadaEntity.getDeafaultObject());

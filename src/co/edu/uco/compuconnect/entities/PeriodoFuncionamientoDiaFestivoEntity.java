@@ -14,9 +14,7 @@ public final class PeriodoFuncionamientoDiaFestivoEntity {
 	private DiaFestivoEntity diaFestivo;
 	
 	
-	public PeriodoFuncionamientoDiaFestivoEntity(UUID identificador, PeriodoFuncionamientoEntity periodoFuncionamiento,
-			DiaFestivoEntity diaFestivo) {
-		super();
+	public PeriodoFuncionamientoDiaFestivoEntity(UUID identificador, PeriodoFuncionamientoEntity periodoFuncionamiento, DiaFestivoEntity diaFestivo) {
 		setIdentificador(identificador);
 		setPeriodoFuncionamiento(periodoFuncionamiento);
 		setDiaFestivo(diaFestivo);
@@ -24,7 +22,6 @@ public final class PeriodoFuncionamientoDiaFestivoEntity {
 
 
 	private PeriodoFuncionamientoDiaFestivoEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setPeriodoFuncionamiento(PeriodoFuncionamientoEntity.getDefaultObject());
 		setDiaFestivo(DiaFestivoEntity.getDefaultObject());

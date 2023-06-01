@@ -12,13 +12,11 @@ public class PerfilEntity {
 	private UsuarioEntity usuario;
 	
 	public PerfilEntity(final UUID identificador, final UsuarioEntity usuario) {
-		super();
 		setIdentificador(identificador);
 		setUsuario(usuario);
 	}
 	
 	private PerfilEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setUsuario(UsuarioEntity.getDeafaulObject());
 	}

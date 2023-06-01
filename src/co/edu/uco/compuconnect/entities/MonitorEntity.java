@@ -20,7 +20,6 @@ public final class MonitorEntity {
 	private static final MonitorEntity DEFAULT_OBJECT = new MonitorEntity();
 	
 	public MonitorEntity(UUID identificador, String nombre, TipoIdentificacionEntity tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular, TipoUsuarioEntity tipoUsuario) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setTipoIdentificacion(tipoIdentificacion);
@@ -32,7 +31,6 @@ public final class MonitorEntity {
 	
 	
 	public MonitorEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setTipoIdentificacion(TipoIdentificacionEntity.getDefaultObject());
