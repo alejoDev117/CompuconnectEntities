@@ -3,7 +3,6 @@ package co.edu.uco.compuconnect.entities;
 import java.util.UUID;
 
 import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
-import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
 public class CentroInformaticaEquipoComputoEntity {
@@ -16,7 +15,6 @@ public class CentroInformaticaEquipoComputoEntity {
 	
 	
 	public CentroInformaticaEquipoComputoEntity(final UUID identificador,final CentroInformaticaEntity centroInformatica,final EquipoComputoEntity equipoComputo) {
-		super();
 		setIdentificador(identificador);
 		setCentroInformatica(centroInformatica);
 		setEquipoComputo(equipoComputo);
@@ -25,7 +23,6 @@ public class CentroInformaticaEquipoComputoEntity {
 	
 	
 	private CentroInformaticaEquipoComputoEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setCentroInformatica(CentroInformaticaEntity.getDefaultObject());
 		setEquipoComputo(EquipoComputoEntity.getDefaultObject());

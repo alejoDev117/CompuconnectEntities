@@ -14,14 +14,12 @@ public class AgendaReservaEntity {
 	
 	
 	public AgendaReservaEntity(UUID identificador, AgendaEntity agenda, ReservaEntity reserva) {
-		super();
 		setIdentificador(identificador);
 		setAgenda(agenda);
 		setReserva(reserva);
 	}
 	
 	private AgendaReservaEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAgenda(AgendaEntity.getDefaultObject());
 		setReserva(ReservaEntity.getDefaultObject());

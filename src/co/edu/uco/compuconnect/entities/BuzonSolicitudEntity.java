@@ -3,7 +3,6 @@ package co.edu.uco.compuconnect.entities;
 import java.util.UUID;
 
 import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
-import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
 
@@ -16,7 +15,6 @@ public class BuzonSolicitudEntity {
 	
 	
 	public BuzonSolicitudEntity(final UUID identificador, final SolicitudEntity solicitud, final RespuestaEntity respuesta) {
-		super();
 		setIdentificador(identificador);
 		setSolicitud(solicitud);
 		setRespuesta(respuesta);
@@ -24,7 +22,6 @@ public class BuzonSolicitudEntity {
 	}
 	
 	private BuzonSolicitudEntity() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setSolicitud(SolicitudEntity.getDefaultObject());
 		setRespuesta(RespuestaEntity.getDefaultObject());

@@ -1,9 +1,7 @@
 package co.edu.uco.compuconnect.entities;
 
-import java.util.Date;
 import java.util.UUID;
 
-import co.edu.uco.compuconnect.crosscutting.utils.UtilDateTime;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
@@ -16,21 +14,16 @@ public class AgendaEntity {
 	private CentroInformaticaEntity centroInformatica;
 	private String nombre;
 	
-	
-	
-
 
 	public AgendaEntity(UUID identificador, PeriodoFuncionamientoEntity periodoFuncionamiento,
 			CentroInformaticaEntity centroInformatica, String nombre) {
-		super();
 		setIdentificador(identificador);
 		setPeriodoFuncionamiento(periodoFuncionamiento);
 		setCentroInformatica(centroInformatica);
 		setNombre(nombre);
 	}
 
-	public AgendaEntity() {
-		super();	
+	public AgendaEntity() {	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setPeriodoFuncionamiento(PeriodoFuncionamientoEntity.getDefaultObject());
 		setCentroInformatica(CentroInformaticaEntity.getDefaultObject());
@@ -61,7 +54,7 @@ public class AgendaEntity {
 		return periodoFuncionamiento;
 	}
 	
-	private final void setPeriodoFuncionamiento(final PeriodoFuncionamientoEntity centroInformatica) {
+	private final void setPeriodoFuncionamiento(final PeriodoFuncionamientoEntity periodoFuncionamiento) {
 		this.periodoFuncionamiento = UtilObject.getDefault(periodoFuncionamiento, PeriodoFuncionamientoEntity.getDefaultObject());
 		
 	}
