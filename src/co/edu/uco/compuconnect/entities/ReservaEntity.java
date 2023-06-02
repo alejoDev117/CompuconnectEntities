@@ -14,21 +14,20 @@ public final class ReservaEntity{
 	
 	public static final ReservaEntity DEFAULT_OBJECT = new ReservaEntity();
 	private UUID identificador;
-	private AgendaEntity agenda;
-	private String descripcion;
+	private UsuarioEntity autor;
 	private TipoReservaEntity tipoReserva;
 	private Date fechaInicio;
 	private Date fechaFin;
 	private  FrecuenciaEntity frecuencia;
+	private String descripcion;
 	private Date horaCreacion;
-	private UsuarioEntity autor;
+	private AgendaEntity agenda;
 	private DetalleReservaEntity detalle;
 	
 
-	public ReservaEntity(UUID identificador,AgendaEntity agenda, UsuarioEntity autor, TipoReservaEntity tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaEntity frecuencia,String descripcion, Date horaCreacion,
+	public ReservaEntity(UUID identificador, UsuarioEntity autor, TipoReservaEntity tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaEntity frecuencia,String descripcion, Date horaCreacion,AgendaEntity agenda,
 			DetalleReservaEntity detalle) {
 		setIdentificador(identificador);
-		setAgenda(agenda);
 		setAutor(autor);
 		setTipoReserva(tipoReserva);
 		setFechaInicio(FechaInicio);
@@ -36,6 +35,7 @@ public final class ReservaEntity{
 		setFrecuencia(frecuencia);
 		setDescripcion(descripcion);
 		setHoraCreacion(horaCreacion);
+		setAgenda(agenda);
 		setDetalle(detalle);
 	}
 	

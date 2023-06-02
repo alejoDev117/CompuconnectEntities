@@ -26,7 +26,9 @@ public class TipoReservaEntity {
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
 	}
 	
-	
+	public static TipoReservaEntity create() {
+		return new TipoReservaEntity();
+	}
 	
 	
 	public static final TipoReservaEntity getDefaultObject() {
@@ -37,16 +39,18 @@ public class TipoReservaEntity {
 		return identificador;
 	}
 	
-	private final void setIdentificador(final UUID identificador) {
+	public final TipoReservaEntity setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 	
 	}
 	public final String getNombre() {
 		return nombre;
 	}
 	
-	private final void setNombre(final String nombre) {
+	public final TipoReservaEntity setNombre(final String nombre) {
 		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
+		return this;
 	
 	}
 	
@@ -54,8 +58,9 @@ public class TipoReservaEntity {
 		return descripcion;
 	}
 	
-	private final void setDescripcion(final String descripcion) {
+	public final TipoReservaEntity setDescripcion(final String descripcion) {
 		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
+		return this;
 		
 	}
 

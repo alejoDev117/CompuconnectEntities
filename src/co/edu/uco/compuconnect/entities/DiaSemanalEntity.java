@@ -22,6 +22,9 @@ public class DiaSemanalEntity {
 		setNombre(UtilText.getUtilText().getDefaultValue());
 	}
 	
+	public static DiaSemanalEntity create() {
+		return new DiaSemanalEntity();
+	}
 	
 	
 	public static final DiaSemanalEntity getDefaultObject() {
@@ -32,16 +35,18 @@ public class DiaSemanalEntity {
 		return identificador;
 	}
 	
-	private final void setIdentificador(final UUID identificador) {
+	public final DiaSemanalEntity setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
+		return this;
 
 	}
 	public final String getNombre() {
 		return nombre;
 	}
 	
-	private final void setNombre(final String nombre) {
+	public final DiaSemanalEntity setNombre(final String nombre) {
 		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
+		return this;
 	
 	}
 	
