@@ -22,11 +22,10 @@ public final class ReservaEntity{
 	private String descripcion;
 	private Date horaCreacion;
 	private AgendaEntity agenda;
-	private DetalleReservaEntity detalle;
+
 	
 
-	public ReservaEntity(UUID identificador, UsuarioEntity autor, TipoReservaEntity tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaEntity frecuencia,String descripcion, Date horaCreacion,AgendaEntity agenda,
-			DetalleReservaEntity detalle) {
+	public ReservaEntity(UUID identificador, UsuarioEntity autor, TipoReservaEntity tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaEntity frecuencia,String descripcion, Date horaCreacion,AgendaEntity agenda) {
 		setIdentificador(identificador);
 		setAutor(autor);
 		setTipoReserva(tipoReserva);
@@ -36,7 +35,6 @@ public final class ReservaEntity{
 		setDescripcion(descripcion);
 		setHoraCreacion(horaCreacion);
 		setAgenda(agenda);
-		setDetalle(detalle);
 	}
 	
 	private ReservaEntity() {
@@ -50,7 +48,6 @@ public final class ReservaEntity{
 		setFrecuencia(FrecuenciaEntity.getDefaultObject());
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
 		setHoraCreacion(UtilDateTime.getDefaultValueDate());
-		setDetalle(DetalleReservaEntity.getDefaultObject());
 	}
 	
 	public static final ReservaEntity create() {
@@ -150,17 +147,6 @@ public final class ReservaEntity{
 	public final AgendaEntity getAgenda() {
 		return agenda;
 	}
-
-	public final DetalleReservaEntity getDetalle() {
-		return detalle;
-	}
-
-	public final ReservaEntity  setDetalle(DetalleReservaEntity detalle) {
-		this.detalle = UtilObject.getDefault(detalle ,DetalleReservaEntity.getDefaultObject());
-		return this;
-	}
-
-
 	
 	
 }
